@@ -1,7 +1,11 @@
 FROM ubuntu:20.04
 
+ENV DEBIAN_FRONTEND=noninteractive
+
+
 RUN apt update
 RUN apt install -y apache2
+
 
 RUN date > /var/www/html/buildtime.txt
 
